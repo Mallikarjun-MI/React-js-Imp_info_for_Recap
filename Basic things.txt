@@ -1,3 +1,11 @@
 /*Create New Project*/
 
 * npx create-react-app projectName
+
+#for Starting React Project
+
+npm start
+
+# if You Want to coment something check below for formatt
+
+ {/*============= Router Tag to Navigate HTML Page's ================ */ }
