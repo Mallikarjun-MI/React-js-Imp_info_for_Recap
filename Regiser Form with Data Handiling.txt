@@ -1,0 +1,49 @@
+import React from 'react';
+
+class Register_Form extends React.Component{
+    constructor(props){
+        super();
+            this.state={
+            employee:{
+                id:'',
+                name:''
+            }
+        }
+    }
+
+    changeHandler = e =>{
+        /* Using Same changeHandler for All Input Fileds */
+        const name = e.target.name;/* Getting of Filed Name */
+        const value = e.target.value;/* Getting of Filed Data */
+        this.setState({employee:{
+            ...this.state.employee,/* to Retrive old Values */
+            [name]:value/* Display Code:Data Formatt */
+        }});
+    }
+
+    onCreateEmployee = () =>{
+        console.log(this.state.employee);
+    }
+
+    render(){
+        return(
+            <div>
+                <h2>New Employee Form</h2>
+                <form>
+                    {/* Employee ID*/}
+                    <div>
+                        <label>Employee ID: <input type="number" name="id" value={this.state.employee.id} onChange={this.changeHandler}/></label>
+                    </div>
+
+                     {/* Employee Name*/}
+                     <div>
+                        <label>Employee Name : <input type="text" name="name" value={this.state.employee.name} onChange={this.changeHandler}/></label>
+                    </div> 
+                    <button onClick={this.onCreateEmployee}>Create Employee</button>
+                </form>
+            </div>
+        )
+    }
+}
+
+export default Register_Form;
