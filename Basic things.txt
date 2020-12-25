@@ -6,6 +6,13 @@
 
 npm start
 
+# For form handiling/Validation "Formik Component Need to Install"
+
+npm install formik --save
+
+#for 3rd party Validation Library
+npm install yup --save
+
 # if You Want to coment something check below for formatt
 
  {/*============= Router Tag to Navigate HTML Page's ================ */ }
